@@ -97,18 +97,18 @@ class MainActivity : AppCompatActivity() {
                 lemonSize = lemonTree.pick()
                 lemonadeState = SQUEEZE
             }
-            SQUEEZE ->{
+            SQUEEZE -> {
                 lemonSize--
                 squeezeCount++
                 if (lemonSize == 0) {
                     lemonadeState = DRINK
                 }
             }
-            DRINK ->{
+            DRINK -> {
                 lemonSize = -1
                 lemonadeState = RESTART
             }
-            RESTART->{
+            RESTART -> {
                 lemonadeState = SELECT
             }
         }
